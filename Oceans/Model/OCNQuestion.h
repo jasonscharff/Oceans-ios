@@ -11,6 +11,6 @@
 @interface OCNQuestion : NSObject
 
 @property (nonatomic) NSString *prompt;
-@property (nonatomic) NSArray<NSString *> *responses;
+@property (nonatomic) NSMutableArray<NSString *> *responses;
 
 @end

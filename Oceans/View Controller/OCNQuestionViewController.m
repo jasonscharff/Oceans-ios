@@ -9,6 +9,7 @@
 #import "OCNQuestionViewController.h"
 
 #import "AutolayoutHelper.h"
+#import "UITableView+LongPressReorder.h"
 
 #import "OCNTheme.h"
 #import "OCNQuestion.h"
@@ -37,9 +38,12 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     
     
     self.tableView = [UITableView new];
+    self.tableView.allowsSelection = NO;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
+    self.tableView.draggingViewIsCentered = YES;
     self.tableView.dataSource = self;
+    self.tableView.longPressReorderEnabled = YES;
     self.tableView.estimatedRowHeight = 60;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[OCNVoteTableViewCell class] forCellReuseIdentifier:kOCNQuestionTableViewCellIdentifier];
@@ -65,7 +69,30 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OCNVoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kOCNQuestionTableViewCellIdentifier];
     [cell configureWithResponse:self.question.responses[indexPath.row] rank:indexPath.row+1];
+    
     return cell;
 }
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+      toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+//    OCNVoteTableViewCell *sourceCell = [tableView cellForRowAtIndexPath:sourceIndexPath];
+//    [sourceCell configureWithResponse:self.question.responses[sourceIndexPath.row] rank:destinationIndexPath.row+1];
+//    
+//    OCNVoteTableViewCell *destinationCell = [tableView cellForRowAtIndexPath:destinationIndexPath];
+//    [destinationCell configureWithResponse:self.question.responses[destinationIndexPath.row] rank:sourceIndexPath.row+1];
+    
+    NSString *source = self.question.responses[sourceIndexPath.row];
+    self.question.responses[sourceIndexPath.row] = self.question.responses[destinationIndexPath.row];
+    self.question.responses[destinationIndexPath.row] = source;
+    
+    
+    
+    
+    
+    
+}
+
 
 @end
