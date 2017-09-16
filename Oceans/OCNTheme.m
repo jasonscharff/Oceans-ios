@@ -41,6 +41,15 @@
     return _font;
 }
 
+- (UIFont *)bodyFont {
+    static dispatch_once_t onceToken;
+    static UIFont *_font;
+    dispatch_once(&onceToken, ^{
+        _font = [UIFont fontWithName:@"AvenirNext-Regular" size:16];
+    });
+    return _font;
+}
+
 - (UIColor *)textColor {
     static dispatch_once_t onceToken;
     static UIColor *_textColor;

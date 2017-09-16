@@ -18,6 +18,8 @@
 		BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */; };
 		BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7631F6D9D1E001BBDBE /* AutolayoutHelper.m */; };
 		BEC8A76A1F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7691F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m */; };
+		BEC8A76D1F6DA63C001BBDBE /* OCNVoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A76C1F6DA63C001BBDBE /* OCNVoteTableViewCell.m */; };
+		BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7701F6DA704001BBDBE /* OCNCircleTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		BEC8A7631F6D9D1E001BBDBE /* AutolayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutHelper.m; sourceTree = "<group>"; };
 		BEC8A7681F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNStandardBackgroundViewController.h; sourceTree = "<group>"; };
 		BEC8A7691F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNStandardBackgroundViewController.m; sourceTree = "<group>"; };
+		BEC8A76B1F6DA63C001BBDBE /* OCNVoteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNVoteTableViewCell.h; sourceTree = "<group>"; };
+		BEC8A76C1F6DA63C001BBDBE /* OCNVoteTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNVoteTableViewCell.m; sourceTree = "<group>"; };
+		BEC8A76F1F6DA704001BBDBE /* OCNCircleTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNCircleTextView.h; sourceTree = "<group>"; };
+		BEC8A7701F6DA704001BBDBE /* OCNCircleTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNCircleTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		BEC8A7391F6D7717001BBDBE /* Oceans */ = {
 			isa = PBXGroup;
 			children = (
+				BEC8A76E1F6DA63F001BBDBE /* Views */,
 				BEC8A7651F6D9D24001BBDBE /* 3rd party */,
 				BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */,
 				BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */,
@@ -128,6 +135,17 @@
 				BEC8A7631F6D9D1E001BBDBE /* AutolayoutHelper.m */,
 			);
 			path = "3rd party";
+			sourceTree = "<group>";
+		};
+		BEC8A76E1F6DA63F001BBDBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8A76B1F6DA63C001BBDBE /* OCNVoteTableViewCell.h */,
+				BEC8A76C1F6DA63C001BBDBE /* OCNVoteTableViewCell.m */,
+				BEC8A76F1F6DA704001BBDBE /* OCNCircleTextView.h */,
+				BEC8A7701F6DA704001BBDBE /* OCNCircleTextView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,12 +219,14 @@
 			files = (
 				BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */,
 				BEC8A74A1F6D7717001BBDBE /* main.m in Sources */,
+				BEC8A76D1F6DA63C001BBDBE /* OCNVoteTableViewCell.m in Sources */,
 				BEC8A75D1F6D999D001BBDBE /* OCNQuestion.m in Sources */,
 				BEC8A76A1F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m in Sources */,
 				BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */,
 				BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */,
 				BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */,
 				BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */,
+				BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */,
 				BEC8A7521F6D9470001BBDBE /* OCNLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

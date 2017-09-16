@@ -15,6 +15,8 @@
 + (instancetype)sharedTheme;
 
 @property (nonatomic) UIFont *headerFont;
+@property (nonatomic) UIFont *bodyFont;
+
 @property (nonatomic) UIImage *backgroundImage;
 @property (nonatomic) UIColor *textColor;
 

@@ -12,6 +12,7 @@
 
 #import "OCNTheme.h"
 #import "OCNQuestion.h"
+#import "OCNVoteTableViewCell.h"
 
 static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCID";
 
@@ -39,7 +40,9 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kOCNQuestionTableViewCellIdentifier];
+    self.tableView.estimatedRowHeight = 60;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[OCNVoteTableViewCell class] forCellReuseIdentifier:kOCNQuestionTableViewCellIdentifier];
     
     
     [AutolayoutHelper configureView:self.view
@@ -60,8 +63,8 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kOCNQuestionTableViewCellIdentifier];
-    cell.textLabel.text = self.question.responses[indexPath.row];
+    OCNVoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kOCNQuestionTableViewCellIdentifier];
+    [cell configureWithResponse:self.question.responses[indexPath.row] rank:indexPath.row+1];
     return cell;
 }
 

@@ -32,7 +32,7 @@
         OCNQuestionViewController *vc  = [[OCNQuestionViewController alloc]init];
         OCNQuestion *question = [[OCNQuestion alloc]init];
         question.prompt = @"President of the United States";
-        question.responses = @[@"HRC", @"DJT"];
+        question.responses = @[@"HRC", @"DJT", @"Jill Stein"];
         vc.question = question;
         rootViewController = vc;
         
