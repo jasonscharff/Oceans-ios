@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "OCNLoginManager.h"
+#import "OCNLoginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
+    UIViewController *rootViewController;
+    
+    if([[OCNLoginManager sharedLoginManager]isLoggedIn]) {
+        
+    } else {
+        rootViewController = [[OCNLoginViewController alloc]init];
+    }
+    
+    _window.rootViewController = rootViewController;
+    [_window makeKeyAndVisible];
+    
     return YES;
 }
 

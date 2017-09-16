@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginViewController.h
 //  Oceans
 //
 //  Created by Jason Scharff on 9/16/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface OCNLoginViewController : UIViewController
 
 @end
-

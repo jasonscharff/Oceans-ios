@@ -8,22 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */; };
-		BEC8A73F1F6D7717001BBDBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A73E1F6D7717001BBDBE /* ViewController.m */; };
 		BEC8A7441F6D7717001BBDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7431F6D7717001BBDBE /* Assets.xcassets */; };
 		BEC8A7471F6D7717001BBDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7451F6D7717001BBDBE /* LaunchScreen.storyboard */; };
 		BEC8A74A1F6D7717001BBDBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7491F6D7717001BBDBE /* main.m */; };
+		BEC8A7521F6D9470001BBDBE /* OCNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7511F6D9470001BBDBE /* OCNLoginViewController.m */; };
+		BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BEC8A7371F6D7717001BBDBE /* Oceans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oceans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BEC8A73D1F6D7717001BBDBE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BEC8A73E1F6D7717001BBDBE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BEC8A7431F6D7717001BBDBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC8A7461F6D7717001BBDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC8A7481F6D7717001BBDBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC8A7491F6D7717001BBDBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BEC8A7501F6D9470001BBDBE /* OCNLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNLoginViewController.h; sourceTree = "<group>"; };
+		BEC8A7511F6D9470001BBDBE /* OCNLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNLoginViewController.m; sourceTree = "<group>"; };
+		BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNLoginManager.h; sourceTree = "<group>"; };
+		BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNLoginManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +61,32 @@
 			children = (
 				BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */,
 				BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */,
-				BEC8A73D1F6D7717001BBDBE /* ViewController.h */,
-				BEC8A73E1F6D7717001BBDBE /* ViewController.m */,
+				BEC8A7561F6D9521001BBDBE /* View Controller */,
+				BEC8A7571F6D952A001BBDBE /* Model */,
 				BEC8A7431F6D7717001BBDBE /* Assets.xcassets */,
 				BEC8A7451F6D7717001BBDBE /* LaunchScreen.storyboard */,
 				BEC8A7481F6D7717001BBDBE /* Info.plist */,
 				BEC8A7491F6D7717001BBDBE /* main.m */,
 			);
 			path = Oceans;
+			sourceTree = "<group>";
+		};
+		BEC8A7561F6D9521001BBDBE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8A7501F6D9470001BBDBE /* OCNLoginViewController.h */,
+				BEC8A7511F6D9470001BBDBE /* OCNLoginViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		BEC8A7571F6D952A001BBDBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */,
+				BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC8A73F1F6D7717001BBDBE /* ViewController.m in Sources */,
+				BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */,
 				BEC8A74A1F6D7717001BBDBE /* main.m in Sources */,
 				BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */,
+				BEC8A7521F6D9470001BBDBE /* OCNLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
