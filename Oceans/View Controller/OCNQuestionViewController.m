@@ -21,6 +21,7 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 
 @property (nonatomic) UILabel *promptLabel;
 @property (nonatomic) UITableView *tableView;
+@property (nonatomic) UIButton *progressButton;
 
 @end
 
@@ -36,6 +37,15 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     self.promptLabel.font = [[OCNTheme sharedTheme]headerFont];
     self.promptLabel.text = self.question.prompt;
     
+    self.progressButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.progressButton setTitle:self.progressButtonTitle forState:UIControlStateNormal];
+    [self.progressButton setTitleColor:[OCNTheme sharedTheme].textColor forState:UIControlStateNormal];
+    self.progressButton.layer.borderColor = [OCNTheme sharedTheme].textColor.CGColor;
+    self.progressButton.layer.borderWidth = 1.0;
+    self.progressButton.layer.cornerRadius = 8.0;
+    [self.progressButton setContentEdgeInsets:UIEdgeInsetsMake(8, 12, 8, 12)];
+    [self.progressButton addTarget:self action:@selector(progressPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     self.tableView = [UITableView new];
     self.tableView.allowsSelection = NO;
@@ -49,15 +59,39 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     [self.tableView registerClass:[OCNVoteTableViewCell class] forCellReuseIdentifier:kOCNQuestionTableViewCellIdentifier];
     
     
+    //SKETCH AF. CHANGE ASAP
+    NSNumber *margin = @(20);
+    
+    NSNumber *topMargin = @(80);
+    
+    
+  
+    
     [AutolayoutHelper configureView:self.view
-                           subViews:NSDictionaryOfVariableBindings(_promptLabel, _tableView)
+                           subViews:NSDictionaryOfVariableBindings(_promptLabel, _tableView, _progressButton)
+                            metrics:NSDictionaryOfVariableBindings(margin,topMargin)
                         constraints:@[@"H:|-[_tableView]-|",
                                       @"H:|-[_promptLabel]-|",
-                                      @"V:|-30-[_promptLabel]-20-[_tableView]-30-|"]];
+                                      @"V:|-(topMargin)-[_promptLabel]-(margin)-[_tableView]-(margin)-[_progressButton]-(topMargin)-|"]];
+    
+    NSLayoutConstraint *progressCenterX = [NSLayoutConstraint constraintWithItem:self.progressButton
+                                                                       attribute:NSLayoutAttributeCenterX
+                                                                       relatedBy:NSLayoutRelationEqual
+                                                                          toItem:self.view
+                                                                       attribute:NSLayoutAttributeCenterX
+                                                                      multiplier:1.0
+                                                                        constant:0];
+    
+    [self.view addConstraint:progressCenterX];
+    
+    [self.tableView reloadData];
+    [self.tableView sizeToFit];
     
     
-    
+}
 
+- (void)progressPressed : (UIButton *)sender {
+    self.progressBlock(self);
 }
 
 #pragma mark UITableViewDataSource
@@ -79,7 +113,7 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     
 //    OCNVoteTableViewCell *sourceCell = [tableView cellForRowAtIndexPath:sourceIndexPath];
 //    [sourceCell configureWithResponse:self.question.responses[sourceIndexPath.row] rank:destinationIndexPath.row+1];
-//    
+//
 //    OCNVoteTableViewCell *destinationCell = [tableView cellForRowAtIndexPath:destinationIndexPath];
 //    [destinationCell configureWithResponse:self.question.responses[destinationIndexPath.row] rank:sourceIndexPath.row+1];
     

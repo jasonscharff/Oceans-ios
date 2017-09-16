@@ -14,5 +14,7 @@
 @interface OCNQuestionViewController : OCNStandardBackgroundViewController
 
 @property OCNQuestion *question;
+@property (nonatomic, copy) void (^progressBlock)(OCNQuestionViewController *);
+@property (nonatomic) NSString *progressButtonTitle;
 
 @end

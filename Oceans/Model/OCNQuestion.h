@@ -12,5 +12,6 @@
 
 @property (nonatomic) NSString *prompt;
 @property (nonatomic) NSMutableArray<NSString *> *responses;
+@property (nonatomic) NSString *address;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE06E48B1F6DC8E300B68A39 /* OCNElectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */; };
 		BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */; };
 		BEC8A7441F6D7717001BBDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7431F6D7717001BBDBE /* Assets.xcassets */; };
 		BEC8A7471F6D7717001BBDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7451F6D7717001BBDBE /* LaunchScreen.storyboard */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE06E4891F6DC8E300B68A39 /* OCNElectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNElectionViewController.h; sourceTree = "<group>"; };
+		BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNElectionViewController.m; sourceTree = "<group>"; };
 		BEC8A7371F6D7717001BBDBE /* Oceans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oceans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		BEC8A7561F6D9521001BBDBE /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BE06E4891F6DC8E300B68A39 /* OCNElectionViewController.h */,
+				BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */,
 				BEC8A7581F6D9891001BBDBE /* OCNQuestionViewController.h */,
 				BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */,
 				BEC8A7681F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.h */,
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE06E48B1F6DC8E300B68A39 /* OCNElectionViewController.m in Sources */,
 				BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */,
 				BEC8A74A1F6D7717001BBDBE /* main.m in Sources */,
 				BEC8A76D1F6DA63C001BBDBE /* OCNVoteTableViewCell.m in Sources */,
@@ -396,6 +402,7 @@
 				BEC8A74F1F6D7717001BBDBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
