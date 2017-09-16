@@ -10,6 +10,8 @@
 
 #import "OCNLoginManager.h"
 #import "OCNLoginViewController.h"
+#import "OCNQuestion.h"
+#import "OCNQuestionViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,12 +22,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     
     UIViewController *rootViewController;
     
     if([[OCNLoginManager sharedLoginManager]isLoggedIn]) {
+        OCNQuestionViewController *vc  = [[OCNQuestionViewController alloc]init];
+        OCNQuestion *question = [[OCNQuestion alloc]init];
+        question.prompt = @"President of the United States";
+        question.responses = @[@"HRC", @"DJT"];
+        vc.question = question;
+        rootViewController = vc;
         
     } else {
         rootViewController = [[OCNLoginViewController alloc]init];
