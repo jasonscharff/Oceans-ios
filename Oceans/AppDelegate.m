@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 #import "OCNLoginManager.h"
-#import "OCNLoginViewController.h"
+#import "OCNScanViewController.h"
 #import "OCNQuestion.h"
 #import "OCNElectionViewController.h"
 
@@ -28,13 +28,9 @@
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     
-    UIViewController *rootViewController;
+//   UIViewController *rootViewController = [[OCNElectionViewController alloc]init];
     
-    if([[OCNLoginManager sharedLoginManager]isLoggedIn]) {
-        rootViewController  = [[OCNElectionViewController alloc]init];
-    } else {
-        rootViewController = [[OCNLoginViewController alloc]init];
-    }
+    UIViewController *rootViewController = [[OCNScanViewController alloc]init];
     
     _window.rootViewController = rootViewController;
     [_window makeKeyAndVisible];

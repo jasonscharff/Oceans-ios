@@ -11,6 +11,5 @@
 @interface OCNLoginManager : NSObject
 
 + (instancetype)sharedLoginManager;
-- (BOOL)isLoggedIn;
 
 @end

@@ -20,8 +20,6 @@
     return _sharedLoginManager;
 }
 
-- (BOOL)isLoggedIn {
-    return YES;
-}
+
 
 @end

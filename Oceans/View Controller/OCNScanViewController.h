@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OCNLoginViewController : UIViewController
+@interface OCNScanViewController : UIViewController
 
 @end

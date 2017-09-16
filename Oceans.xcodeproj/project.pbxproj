@@ -12,9 +12,9 @@
 		BEC8A7441F6D7717001BBDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7431F6D7717001BBDBE /* Assets.xcassets */; };
 		BEC8A7471F6D7717001BBDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7451F6D7717001BBDBE /* LaunchScreen.storyboard */; };
 		BEC8A74A1F6D7717001BBDBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7491F6D7717001BBDBE /* main.m */; };
-		BEC8A7521F6D9470001BBDBE /* OCNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7511F6D9470001BBDBE /* OCNLoginViewController.m */; };
+		BEC8A7521F6D9470001BBDBE /* OCNScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */; };
 		BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */; };
-		BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */; };
+		BEC8A75A1F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7591F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m */; };
 		BEC8A75D1F6D999D001BBDBE /* OCNQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A75C1F6D999D001BBDBE /* OCNQuestion.m */; };
 		BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */; };
 		BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7631F6D9D1E001BBDBE /* AutolayoutHelper.m */; };
@@ -34,12 +34,12 @@
 		BEC8A7461F6D7717001BBDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC8A7481F6D7717001BBDBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC8A7491F6D7717001BBDBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		BEC8A7501F6D9470001BBDBE /* OCNLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNLoginViewController.h; sourceTree = "<group>"; };
-		BEC8A7511F6D9470001BBDBE /* OCNLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNLoginViewController.m; sourceTree = "<group>"; };
+		BEC8A7501F6D9470001BBDBE /* OCNScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNScanViewController.h; sourceTree = "<group>"; };
+		BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNScanViewController.m; sourceTree = "<group>"; };
 		BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNLoginManager.h; sourceTree = "<group>"; };
 		BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNLoginManager.m; sourceTree = "<group>"; };
-		BEC8A7581F6D9891001BBDBE /* OCNQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNQuestionViewController.h; sourceTree = "<group>"; };
-		BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNQuestionViewController.m; sourceTree = "<group>"; };
+		BEC8A7581F6D9891001BBDBE /* OCNScanPrivateKeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNScanPrivateKeyViewController.h; sourceTree = "<group>"; };
+		BEC8A7591F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNScanPrivateKeyViewController.m; sourceTree = "<group>"; };
 		BEC8A75B1F6D999D001BBDBE /* OCNQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNQuestion.h; sourceTree = "<group>"; };
 		BEC8A75C1F6D999D001BBDBE /* OCNQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNQuestion.m; sourceTree = "<group>"; };
 		BEC8A75F1F6D9AC7001BBDBE /* OCNTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNTheme.h; sourceTree = "<group>"; };
@@ -108,12 +108,12 @@
 			children = (
 				BE06E4891F6DC8E300B68A39 /* OCNElectionViewController.h */,
 				BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */,
-				BEC8A7581F6D9891001BBDBE /* OCNQuestionViewController.h */,
-				BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */,
+				BEC8A7581F6D9891001BBDBE /* OCNScanPrivateKeyViewController.h */,
+				BEC8A7591F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m */,
 				BEC8A7681F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.h */,
 				BEC8A7691F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m */,
-				BEC8A7501F6D9470001BBDBE /* OCNLoginViewController.h */,
-				BEC8A7511F6D9470001BBDBE /* OCNLoginViewController.m */,
+				BEC8A7501F6D9470001BBDBE /* OCNScanViewController.h */,
+				BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -236,10 +236,10 @@
 				BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */,
 				BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */,
 				BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */,
-				BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */,
+				BEC8A75A1F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m in Sources */,
 				BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */,
 				BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */,
-				BEC8A7521F6D9470001BBDBE /* OCNLoginViewController.m in Sources */,
+				BEC8A7521F6D9470001BBDBE /* OCNScanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

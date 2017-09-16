@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jason Felix Scharff. All rights reserved.
 //
 
-#import "OCNQuestionViewController.h"
+#import "OCNScanPrivateKeyViewController.h"
 
 #import "AutolayoutHelper.h"
 #import "UITableView+LongPressReorder.h"
@@ -17,7 +17,7 @@
 
 static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCID";
 
-@interface OCNQuestionViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface OCNScanPrivateKeyViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) UILabel *promptLabel;
 @property (nonatomic) UITableView *tableView;
@@ -25,7 +25,7 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 
 @end
 
-@implementation OCNQuestionViewController
+@implementation OCNScanPrivateKeyViewController
 
 
 - (void)viewDidLoad {

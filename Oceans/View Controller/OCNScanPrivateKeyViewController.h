@@ -11,10 +11,10 @@
 
 @class OCNQuestion;
 
-@interface OCNQuestionViewController : OCNStandardBackgroundViewController
+@interface OCNScanPrivateKeyViewController : OCNStandardBackgroundViewController
 
 @property OCNQuestion *question;
-@property (nonatomic, copy) void (^progressBlock)(OCNQuestionViewController *);
+@property (nonatomic, copy) void (^progressBlock)(OCNScanPrivateKeyViewController *);
 @property (nonatomic) NSString *progressButtonTitle;
 
 @end
