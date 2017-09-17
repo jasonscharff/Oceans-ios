@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+@class OCNQuestion;
 @interface OCNElectionManager : NSObject
+
+typedef void (^QuestionsResponse)(NSArray<OCNQuestion *>*);
 
 + (instancetype)sharedManager;
 

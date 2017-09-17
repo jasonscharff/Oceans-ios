@@ -7,13 +7,10 @@
 //
 
 #import "OCNElectionManager.h"
+#import "OCNQuestion.h"
 
-@class OCNQuestion;
 
 @implementation OCNElectionManager
-
-typedef void (^QuestionsResponse)(NSArray<OCNQuestion *>*);
-
 
 + (instancetype)sharedManager {
     static dispatch_once_t onceToken;
