@@ -12,6 +12,7 @@
 #import "OCNQuestionViewController.h"
 #import "OCNElectionManager.h"
 #import "OCNThankYouViewController.h"
+#import "OCNScanViewController.h"
 
 @interface OCNElectionViewController ()
 
@@ -35,10 +36,22 @@
         index++;
         
         if (index >= self.questions.count) {
+            
+            
+            return;
             [[OCNElectionManager sharedManager]vote:self.questions completion:^(BOOL success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if(success) {
                         OCNThankYouViewController *thankYou = [[OCNThankYouViewController alloc]init];
+                        CATransition *transition = [CATransition animation];
+                        transition.duration = 0.5;
+                        transition.timingFunction =
+                        [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+                        transition.type = kCATransitionMoveIn;
+                        transition.subtype = kCATransitionFromTop;
+                        UIView *containerView = self.view.window;
+                        [containerView.layer addAnimation:transition forKey:nil];
+                        
                         [self presentViewController:thankYou animated:YES completion:nil];
                     } else {
                         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Something happened. Try again?" preferredStyle:UIAlertControllerStyleAlert];
