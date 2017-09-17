@@ -14,7 +14,7 @@
 		BEC8A74A1F6D7717001BBDBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7491F6D7717001BBDBE /* main.m */; };
 		BEC8A7521F6D9470001BBDBE /* OCNScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */; };
 		BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */; };
-		BEC8A75A1F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7591F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m */; };
+		BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */; };
 		BEC8A75D1F6D999D001BBDBE /* OCNQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A75C1F6D999D001BBDBE /* OCNQuestion.m */; };
 		BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */; };
 		BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7631F6D9D1E001BBDBE /* AutolayoutHelper.m */; };
@@ -22,6 +22,8 @@
 		BEC8A76D1F6DA63C001BBDBE /* OCNVoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A76C1F6DA63C001BBDBE /* OCNVoteTableViewCell.m */; };
 		BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7701F6DA704001BBDBE /* OCNCircleTextView.m */; };
 		BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7731F6DBA24001BBDBE /* UITableView+LongPressReorder.m */; };
+		BEFB507D1F6DFE93000D7064 /* CATransition+Oceans.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFB507C1F6DFE93000D7064 /* CATransition+Oceans.m */; };
+		BEFB50801F6DFF83000D7064 /* OCNBottomBorderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFB507F1F6DFF83000D7064 /* OCNBottomBorderTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +40,8 @@
 		BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNScanViewController.m; sourceTree = "<group>"; };
 		BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNLoginManager.h; sourceTree = "<group>"; };
 		BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNLoginManager.m; sourceTree = "<group>"; };
-		BEC8A7581F6D9891001BBDBE /* OCNScanPrivateKeyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNScanPrivateKeyViewController.h; sourceTree = "<group>"; };
-		BEC8A7591F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNScanPrivateKeyViewController.m; sourceTree = "<group>"; };
+		BEC8A7581F6D9891001BBDBE /* OCNQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNQuestionViewController.h; sourceTree = "<group>"; };
+		BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNQuestionViewController.m; sourceTree = "<group>"; };
 		BEC8A75B1F6D999D001BBDBE /* OCNQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNQuestion.h; sourceTree = "<group>"; };
 		BEC8A75C1F6D999D001BBDBE /* OCNQuestion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNQuestion.m; sourceTree = "<group>"; };
 		BEC8A75F1F6D9AC7001BBDBE /* OCNTheme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNTheme.h; sourceTree = "<group>"; };
@@ -54,6 +56,12 @@
 		BEC8A7701F6DA704001BBDBE /* OCNCircleTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNCircleTextView.m; sourceTree = "<group>"; };
 		BEC8A7721F6DBA24001BBDBE /* UITableView+LongPressReorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+LongPressReorder.h"; path = "../../../../../Downloads/UITableView-Reorder-master/UITableView+Reorder/UITableView+LongPressReorder.h"; sourceTree = "<group>"; };
 		BEC8A7731F6DBA24001BBDBE /* UITableView+LongPressReorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+LongPressReorder.m"; path = "../../../../../Downloads/UITableView-Reorder-master/UITableView+Reorder/UITableView+LongPressReorder.m"; sourceTree = "<group>"; };
+		BEFB50741F6DEFCE000D7064 /* OCNManualEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNManualEntryViewController.m; sourceTree = "<group>"; };
+		BEFB50751F6DEFCE000D7064 /* OCNManualEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNManualEntryViewController.h; sourceTree = "<group>"; };
+		BEFB507B1F6DFE93000D7064 /* CATransition+Oceans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CATransition+Oceans.h"; sourceTree = "<group>"; };
+		BEFB507C1F6DFE93000D7064 /* CATransition+Oceans.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CATransition+Oceans.m"; sourceTree = "<group>"; };
+		BEFB507E1F6DFF83000D7064 /* OCNBottomBorderTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNBottomBorderTextField.h; sourceTree = "<group>"; };
+		BEFB507F1F6DFF83000D7064 /* OCNBottomBorderTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNBottomBorderTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,8 @@
 				BEC8A7651F6D9D24001BBDBE /* 3rd party */,
 				BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */,
 				BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */,
+				BEFB507B1F6DFE93000D7064 /* CATransition+Oceans.h */,
+				BEFB507C1F6DFE93000D7064 /* CATransition+Oceans.m */,
 				BEC8A75F1F6D9AC7001BBDBE /* OCNTheme.h */,
 				BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */,
 				BEC8A75E1F6D99A1001BBDBE /* Model */,
@@ -106,10 +116,12 @@
 		BEC8A7561F6D9521001BBDBE /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BEFB50751F6DEFCE000D7064 /* OCNManualEntryViewController.h */,
+				BEFB50741F6DEFCE000D7064 /* OCNManualEntryViewController.m */,
 				BE06E4891F6DC8E300B68A39 /* OCNElectionViewController.h */,
 				BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */,
-				BEC8A7581F6D9891001BBDBE /* OCNScanPrivateKeyViewController.h */,
-				BEC8A7591F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m */,
+				BEC8A7581F6D9891001BBDBE /* OCNQuestionViewController.h */,
+				BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */,
 				BEC8A7681F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.h */,
 				BEC8A7691F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m */,
 				BEC8A7501F6D9470001BBDBE /* OCNScanViewController.h */,
@@ -150,6 +162,8 @@
 		BEC8A76E1F6DA63F001BBDBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BEFB507E1F6DFF83000D7064 /* OCNBottomBorderTextField.h */,
+				BEFB507F1F6DFF83000D7064 /* OCNBottomBorderTextField.m */,
 				BEC8A76B1F6DA63C001BBDBE /* OCNVoteTableViewCell.h */,
 				BEC8A76C1F6DA63C001BBDBE /* OCNVoteTableViewCell.m */,
 				BEC8A76F1F6DA704001BBDBE /* OCNCircleTextView.h */,
@@ -227,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEFB50801F6DFF83000D7064 /* OCNBottomBorderTextField.m in Sources */,
 				BE06E48B1F6DC8E300B68A39 /* OCNElectionViewController.m in Sources */,
 				BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */,
 				BEC8A74A1F6D7717001BBDBE /* main.m in Sources */,
@@ -236,8 +251,9 @@
 				BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */,
 				BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */,
 				BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */,
-				BEC8A75A1F6D9891001BBDBE /* OCNScanPrivateKeyViewController.m in Sources */,
+				BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */,
 				BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */,
+				BEFB507D1F6DFE93000D7064 /* CATransition+Oceans.m in Sources */,
 				BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */,
 				BEC8A7521F6D9470001BBDBE /* OCNScanViewController.m in Sources */,
 			);

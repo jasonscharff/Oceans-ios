@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jason Felix Scharff. All rights reserved.
 //
 
-#import "OCNScanPrivateKeyViewController.h"
+#import "OCNQuestionViewController.h"
 
 #import "AutolayoutHelper.h"
 #import "UITableView+LongPressReorder.h"
@@ -17,7 +17,7 @@
 
 static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCID";
 
-@interface OCNScanPrivateKeyViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface OCNQuestionViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) UILabel *promptLabel;
 @property (nonatomic) UITableView *tableView;
@@ -25,7 +25,7 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 
 @end
 
-@implementation OCNScanPrivateKeyViewController
+@implementation OCNQuestionViewController
 
 
 - (void)viewDidLoad {
@@ -39,6 +39,7 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     
     self.progressButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.progressButton setTitle:self.progressButtonTitle forState:UIControlStateNormal];
+    self.progressButton.titleLabel.font = [OCNTheme sharedTheme].bodyFont;
     [self.progressButton setTitleColor:[OCNTheme sharedTheme].textColor forState:UIControlStateNormal];
     self.progressButton.layer.borderColor = [OCNTheme sharedTheme].textColor.CGColor;
     self.progressButton.layer.borderWidth = 1.0;
@@ -85,7 +86,6 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
     [self.view addConstraint:progressCenterX];
     
     [self.tableView reloadData];
-    [self.tableView sizeToFit];
     
     
 }

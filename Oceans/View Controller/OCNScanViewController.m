@@ -8,6 +8,9 @@
 
 #import "OCNScanViewController.h"
 
+#import "OCNManualEntryViewController.m"
+#import "CATransition+Oceans.h"
+
 
 @import AVFoundation;
 
@@ -26,6 +29,31 @@
     [super viewDidLoad];
 }
 
+- (void)addManualButton {
+    UIButton *manualButton = [UIButton buttonWithType:UIButtonTypePlain];
+    manualButton.layer.zPosition = 100000;
+    
+    [manualButton setTitle:@"Manual" forState:UIControlStateNormal];
+    [manualButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    manualButton.titleLabel.font = [OCNTheme sharedTheme].bodyFont;
+    
+    [manualButton addTarget:self action:@selector(switchToManual:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    [AutolayoutHelper configureView:self.videoPreviewView
+                           subViews:NSDictionaryOfVariableBindings(manualButton)
+                        constraints:@[@"H:|-[manualButton]",
+                                      @"V:|-[manualButton]"]];
+    
+}
+
+- (void)switchToManual : (id)sender {
+    UIViewController *vc = [[OCNManualEntryViewController alloc]init];
+    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self startReading];
@@ -42,6 +70,7 @@
         return;
     }
     self.videoPreviewView = [[UIView alloc]initWithFrame:self.view.layer.bounds];
+    [self addManualButton];
     [self.view addSubview:self.videoPreviewView];
     _captureSession = [[AVCaptureSession alloc] init];
     [_captureSession addInput:input];
@@ -65,45 +94,40 @@
             [_captureSession stopRunning];
             NSString *string = metadataObj.stringValue;
             
-//            [[[MEHCheckInStoreController sharedCheckInStoreController]checkInUser:string]continueWithSuccessBlock:^id _Nullable(BFTask * _Nonnull t) {
-//                MEHProfileDisplaPageViewController *pageVC = [[MEHProfileDisplaPageViewController alloc]init];
-//                pageVC.user = t.result;
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [self.navigationController pushViewController:pageVC animated:YES];
-//                });
-//                return nil;
-//            }];
+            
             
             
             [_captureSession stopRunning];
             
-            UILabel *accessCodeLabel = [UILabel new];
-            accessCodeLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:30];
-            accessCodeLabel.text = string;
-            accessCodeLabel.textColor = [UIColor whiteColor];
             
-            accessCodeLabel.layer.shadowOpacity = 1.0;
-            accessCodeLabel.layer.shadowRadius = 0.0;
-            accessCodeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
-            accessCodeLabel.layer.shadowOffset = CGSizeMake(-1.0, -2.0);
-            accessCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
-            
-            NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:accessCodeLabel
-                                                                       attribute:NSLayoutAttributeCenterX
-                                                                       relatedBy:NSLayoutRelationEqual
-                                                                          toItem:self.view
-                                                                       attribute:NSLayoutAttributeCenterX
-                                                                      multiplier:1
-                                                                        constant:0];
-            
-            NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:accessCodeLabel
-                                                                       attribute:NSLayoutAttributeCenterY
-                                                                       relatedBy:NSLayoutRelationEqual
-                                                                          toItem:self.view
-                                                                       attribute:NSLayoutAttributeCenterY
-                                                                      multiplier:1
-                                                                        constant:0];
             dispatch_async(dispatch_get_main_queue(), ^{
+                UILabel *accessCodeLabel = [UILabel new];
+                accessCodeLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:30];
+                accessCodeLabel.text = string;
+                accessCodeLabel.textColor = [UIColor whiteColor];
+                
+                accessCodeLabel.layer.shadowOpacity = 1.0;
+                accessCodeLabel.layer.shadowRadius = 0.0;
+                accessCodeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+                accessCodeLabel.layer.shadowOffset = CGSizeMake(-1.0, -2.0);
+                accessCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+                
+                NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:accessCodeLabel
+                                                                           attribute:NSLayoutAttributeCenterX
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self.view
+                                                                           attribute:NSLayoutAttributeCenterX
+                                                                          multiplier:1
+                                                                            constant:0];
+                
+                NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:accessCodeLabel
+                                                                           attribute:NSLayoutAttributeCenterY
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self.view
+                                                                           attribute:NSLayoutAttributeCenterY
+                                                                          multiplier:1
+                                                                            constant:0];
+                
                 [self.view addSubview:accessCodeLabel];
                 [self.view addConstraint:centerX];
                 [self.view addConstraint:centerY];
@@ -136,6 +160,7 @@
 -(void)dismissView : (UIBarButtonItem *)barButtonItem {
     [self dismissSelfToNextView:NO];
 }
+
 
 
 @end

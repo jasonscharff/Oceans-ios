@@ -9,7 +9,7 @@
 #import "OCNElectionViewController.h"
 
 #import "OCNQuestion.h"
-#import "OCNScanPrivateKeyViewController.h"
+#import "OCNQuestionViewController.h"
 
 @interface OCNElectionViewController ()
 
@@ -45,7 +45,7 @@
         if (index >= self.questions.count) {
             return;
         }
-        OCNScanPrivateKeyViewController *questionVC = [[OCNScanPrivateKeyViewController alloc]init];
+        OCNQuestionViewController *questionVC = [[OCNQuestionViewController alloc]init];
         questionVC.title = @"";
         questionVC.question = self.questions[index];
         
