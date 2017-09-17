@@ -8,7 +8,12 @@
 
 #import "OCNElectionManager.h"
 
+@class OCNQuestion;
+
 @implementation OCNElectionManager
+
+typedef void (^QuestionsResponse)(NSArray<OCNQuestion *>*);
+
 
 + (instancetype)sharedManager {
     static dispatch_once_t onceToken;
@@ -19,6 +24,8 @@
     
     return _sharedElectionManager;
 }
+
+
 
 
 
