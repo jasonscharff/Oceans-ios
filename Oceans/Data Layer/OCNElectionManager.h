@@ -12,8 +12,13 @@
 @class OCNQuestion;
 @interface OCNElectionManager : NSObject
 
-typedef void (^QuestionsResponse)(NSArray<OCNQuestion *>*);
+@property (nonatomic) NSArray<OCNQuestion *>*questions;
+
+typedef void (^SuccessResponse)(BOOL);
+
 
 + (instancetype)sharedManager;
+- (void)getQuestions : (SuccessResponse)completion;
+- (void)vote : (NSArray<OCNQuestion *>*)questions completion: (SuccessResponse)completion;
 
 @end

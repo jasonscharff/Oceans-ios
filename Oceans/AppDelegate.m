@@ -8,10 +8,8 @@
 
 #import "AppDelegate.h"
 
-#import "OCNElectionManager.h"
+#import "OCNThankYouViewController.h"
 #import "OCNScanViewController.h"
-#import "OCNQuestion.h"
-#import "OCNElectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,8 +25,6 @@
     
     _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    
-//   UIViewController *rootViewController = [[OCNElectionViewController alloc]init];
     
     UIViewController *rootViewController = [[OCNScanViewController alloc]init];
     

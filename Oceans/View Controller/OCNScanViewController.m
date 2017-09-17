@@ -9,6 +9,9 @@
 #import "OCNScanViewController.h"
 
 #import "OCNManualEntryViewController.m"
+#import "OCNUserManager.h"
+#import "OCNElectionManager.h"
+#import "OCNElectionViewController.h"
 
 
 @import AVFoundation;
@@ -69,7 +72,7 @@
         return;
     }
     self.videoPreviewView = [[UIView alloc]initWithFrame:self.view.layer.bounds];
-    [self addManualButton];
+   // [self addManualButton];
     [self.view addSubview:self.videoPreviewView];
     _captureSession = [[AVCaptureSession alloc] init];
     [_captureSession addInput:input];
@@ -93,53 +96,86 @@
             [_captureSession stopRunning];
             NSString *string = metadataObj.stringValue;
             
+            NSData *objectData = [string dataUsingEncoding:NSUTF8StringEncoding];
+            NSError *error;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:objectData
+                                                                 options:NSJSONReadingMutableContainers
+                                                                   error:&error];
             
             
             
-            [_captureSession stopRunning];
-            
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UILabel *accessCodeLabel = [UILabel new];
-                accessCodeLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:30];
-                accessCodeLabel.text = string;
-                accessCodeLabel.textColor = [UIColor whiteColor];
+            if (error) {
                 
-                accessCodeLabel.layer.shadowOpacity = 1.0;
-                accessCodeLabel.layer.shadowRadius = 0.0;
-                accessCodeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
-                accessCodeLabel.layer.shadowOffset = CGSizeMake(-1.0, -2.0);
-                accessCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+                UIAlertController *errorController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Invalid QR Code" preferredStyle:UIAlertControllerStyleAlert];
+                [errorController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+                [self presentViewController:errorController animated:YES completion:nil];
                 
-                NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:accessCodeLabel
-                                                                           attribute:NSLayoutAttributeCenterX
-                                                                           relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self.view
-                                                                           attribute:NSLayoutAttributeCenterX
-                                                                          multiplier:1
-                                                                            constant:0];
+            } else {
                 
-                NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:accessCodeLabel
-                                                                           attribute:NSLayoutAttributeCenterY
-                                                                           relatedBy:NSLayoutRelationEqual
-                                                                              toItem:self.view
-                                                                           attribute:NSLayoutAttributeCenterY
-                                                                          multiplier:1
-                                                                            constant:0];
-                
-                [self.view addSubview:accessCodeLabel];
-                [self.view addConstraint:centerX];
-                [self.view addConstraint:centerY];
-                [self.view layoutIfNeeded];
-                centerY.constant = (self.view.frame.size.height / 2 + accessCodeLabel.frame.size.height/2) * -1;
-                [UIView animateWithDuration:1.5 animations:^{
-                    [self.view layoutIfNeeded];
-                    accessCodeLabel.transform = CGAffineTransformScale(accessCodeLabel.transform, 0.35, 0.35);
-                } completion:^(BOOL finished) {
-                    //if it hasn't finished by now there's clearly an issue so we'll start reading again.
-                    [self startReading];
+                //an instant process
+                [[OCNUserManager sharedManager]login:json];
+                [[OCNElectionManager sharedManager]getQuestions:^(BOOL success) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if(success) {
+                            OCNElectionViewController *electionVC = [[OCNElectionViewController alloc]init];
+                            [self presentViewController:electionVC animated:YES completion:nil];
+                        } else {
+                            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Something happened. Try again?" preferredStyle:UIAlertControllerStyleAlert];
+                            [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+                            [self presentViewController:alertController animated:YES completion:nil];
+                        }
+                    });
+                    
                 }];
-            });
+                
+                
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //A neat UI trick to waste time while we load the questions.
+                    UILabel *accessCodeLabel = [UILabel new];
+                    accessCodeLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:30];
+                    accessCodeLabel.text = @"Analyzing...";
+                    accessCodeLabel.textColor = [UIColor whiteColor];
+                    
+                    accessCodeLabel.layer.shadowOpacity = 1.0;
+                    accessCodeLabel.layer.shadowRadius = 0.0;
+                    accessCodeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+                    accessCodeLabel.layer.shadowOffset = CGSizeMake(-1.0, -2.0);
+                    accessCodeLabel.translatesAutoresizingMaskIntoConstraints = NO;
+                    
+                    NSLayoutConstraint *centerX = [NSLayoutConstraint constraintWithItem:accessCodeLabel
+                                                                               attribute:NSLayoutAttributeCenterX
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self.view
+                                                                               attribute:NSLayoutAttributeCenterX
+                                                                              multiplier:1
+                                                                                constant:0];
+                    
+                    NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:accessCodeLabel
+                                                                               attribute:NSLayoutAttributeCenterY
+                                                                               relatedBy:NSLayoutRelationEqual
+                                                                                  toItem:self.view
+                                                                               attribute:NSLayoutAttributeCenterY
+                                                                              multiplier:1
+                                                                                constant:0];
+                    
+                    [self.view addSubview:accessCodeLabel];
+                    [self.view addConstraint:centerX];
+                    [self.view addConstraint:centerY];
+                    [self.view layoutIfNeeded];
+                    centerY.constant = (self.view.frame.size.height / 2 + accessCodeLabel.frame.size.height/2) * -1;
+                    [UIView animateWithDuration:1.5 animations:^{
+                        [self.view layoutIfNeeded];
+                        accessCodeLabel.transform = CGAffineTransformScale(accessCodeLabel.transform, 0.35, 0.35);
+                    } completion:^(BOOL finished) {
+                        //if it hasn't finished by now there's clearly an issue so we'll start reading again.
+                        [self startReading];
+                    }];
+                });
+            }
+            
+            
+            
         }
     }
 }

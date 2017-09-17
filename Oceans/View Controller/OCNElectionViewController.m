@@ -10,6 +10,8 @@
 
 #import "OCNQuestion.h"
 #import "OCNQuestionViewController.h"
+#import "OCNElectionManager.h"
+#import "OCNThankYouViewController.h"
 
 @interface OCNElectionViewController ()
 
@@ -24,18 +26,8 @@
     [super viewDidLoad];
     [self configureNavigationBar];
     
-    //Temporary hard coded values.
     
-    OCNQuestion *question = [[OCNQuestion alloc]init];
-    question.prompt = @"President of the United States";
-    question.responses = [@[@"HRC", @"DJT", @"Jill Stein"]mutableCopy];
-    
-    OCNQuestion *question2 = [[OCNQuestion alloc]init];
-    question2.prompt = @"PM of Canada";
-    question2.responses = [@[@"Justin Trudeau", @"Stephen Harper", @"Donald John Trump"]mutableCopy];
-    
-    
-    self.questions = @[question, question2];
+    self.questions = [OCNElectionManager sharedManager].questions;
     
     
     void (^__block nextPressed)(UIViewController *) = ^void(UIViewController * vc){
@@ -43,6 +35,19 @@
         index++;
         
         if (index >= self.questions.count) {
+            [[OCNElectionManager sharedManager]vote:self.questions completion:^(BOOL success) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if(success) {
+                        OCNThankYouViewController *thankYou = [[OCNThankYouViewController alloc]init];
+                        [self presentViewController:thankYou animated:YES completion:nil];
+                    } else {
+                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Something happened. Try again?" preferredStyle:UIAlertControllerStyleAlert];
+                        [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+                        [self presentViewController:alertController animated:YES completion:nil];
+                    }
+                });
+                
+            }];
             return;
         }
         OCNQuestionViewController *questionVC = [[OCNQuestionViewController alloc]init];
