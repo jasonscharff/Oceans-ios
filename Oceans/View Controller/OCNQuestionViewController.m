@@ -14,6 +14,7 @@
 #import "OCNTheme.h"
 #import "OCNQuestion.h"
 #import "OCNVoteTableViewCell.h"
+#import "OCNCandidate.h"
 
 static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCID";
 
@@ -102,7 +103,7 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     OCNVoteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kOCNQuestionTableViewCellIdentifier];
-    [cell configureWithResponse:self.question.responses[indexPath.row] rank:indexPath.row+1];
+    [cell configureWithResponse:self.question.responses[indexPath.row].name rank:indexPath.row+1];
     
     return cell;
 }
@@ -111,13 +112,8 @@ static NSString * const kOCNQuestionTableViewCellIdentifier = @"kOCNQuestionTVCI
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
       toIndexPath:(NSIndexPath *)destinationIndexPath {
     
-//    OCNVoteTableViewCell *sourceCell = [tableView cellForRowAtIndexPath:sourceIndexPath];
-//    [sourceCell configureWithResponse:self.question.responses[sourceIndexPath.row] rank:destinationIndexPath.row+1];
-//
-//    OCNVoteTableViewCell *destinationCell = [tableView cellForRowAtIndexPath:destinationIndexPath];
-//    [destinationCell configureWithResponse:self.question.responses[destinationIndexPath.row] rank:sourceIndexPath.row+1];
     
-    NSString *source = self.question.responses[sourceIndexPath.row];
+    OCNCandidate *source = self.question.responses[sourceIndexPath.row];
     self.question.responses[sourceIndexPath.row] = self.question.responses[destinationIndexPath.row];
     self.question.responses[destinationIndexPath.row] = source;
     
