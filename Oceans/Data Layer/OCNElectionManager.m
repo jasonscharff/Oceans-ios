@@ -22,6 +22,11 @@
     return _sharedElectionManager;
 }
 
+- (void)submitOrder : (NSArray<OCNQuestion *>*)questions {
+    
+}
+
+
 
 
 

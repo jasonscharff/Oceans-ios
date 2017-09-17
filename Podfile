@@ -8,5 +8,6 @@ target 'Oceans' do
   # Pods for Oceans
 pod 'AFNetworking', '~> 3.0'
 pod 'JNKeychain'
+pod 'SQAESDE', '~> 0.1'
 
 end

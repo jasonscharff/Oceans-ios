@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A3BE955C713966ECAB2768D5 /* libPods-Oceans.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37184232674FBB117D19AF37 /* libPods-Oceans.a */; };
 		BE06E48B1F6DC8E300B68A39 /* OCNElectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */; };
+		BE22799D1F6E2992008D5E89 /* OCNCryptography.m in Sources */ = {isa = PBXBuildFile; fileRef = BE22799C1F6E2992008D5E89 /* OCNCryptography.m */; };
 		BE9870811F6E060100FCF9CE /* OCNHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9870801F6E060100FCF9CE /* OCNHTTPSessionManager.m */; };
 		BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */; };
 		BEC8A7441F6D7717001BBDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7431F6D7717001BBDBE /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 		37184232674FBB117D19AF37 /* libPods-Oceans.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Oceans.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE06E4891F6DC8E300B68A39 /* OCNElectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNElectionViewController.h; sourceTree = "<group>"; };
 		BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNElectionViewController.m; sourceTree = "<group>"; };
+		BE22799B1F6E2992008D5E89 /* OCNCryptography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNCryptography.h; sourceTree = "<group>"; };
+		BE22799C1F6E2992008D5E89 /* OCNCryptography.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNCryptography.m; sourceTree = "<group>"; };
 		BE98707F1F6E060100FCF9CE /* OCNHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNHTTPSessionManager.h; sourceTree = "<group>"; };
 		BE9870801F6E060100FCF9CE /* OCNHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNHTTPSessionManager.m; sourceTree = "<group>"; };
 		BEC8A7371F6D7717001BBDBE /* Oceans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oceans.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +100,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BE22799E1F6E2996008D5E89 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8A75F1F6D9AC7001BBDBE /* OCNTheme.h */,
+				BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */,
+				BE22799B1F6E2992008D5E89 /* OCNCryptography.h */,
+				BE22799C1F6E2992008D5E89 /* OCNCryptography.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		BEC8A72E1F6D7717001BBDBE = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +135,8 @@
 				BEC8A76E1F6DA63F001BBDBE /* Views */,
 				BEC8A7651F6D9D24001BBDBE /* 3rd party */,
 				BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */,
+				BE22799E1F6E2996008D5E89 /* Utilities */,
 				BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */,
-				BEC8A75F1F6D9AC7001BBDBE /* OCNTheme.h */,
-				BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */,
 				BEC8A75E1F6D99A1001BBDBE /* Model */,
 				BEC8A7561F6D9521001BBDBE /* View Controller */,
 				BEC8A7571F6D952A001BBDBE /* Data Layer */,
@@ -324,6 +337,7 @@
 				BEC8A75D1F6D999D001BBDBE /* OCNQuestion.m in Sources */,
 				BEC8A76A1F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m in Sources */,
 				BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */,
+				BE22799D1F6E2992008D5E89 /* OCNCryptography.m in Sources */,
 				BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */,
 				BE9870811F6E060100FCF9CE /* OCNHTTPSessionManager.m in Sources */,
 				BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */,
