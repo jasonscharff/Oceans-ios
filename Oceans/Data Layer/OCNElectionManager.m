@@ -10,14 +10,14 @@
 
 @implementation OCNElectionManager
 
-+ (instancetype)sharedLoginManager {
++ (instancetype)sharedManager {
     static dispatch_once_t onceToken;
-    static OCNElectionManager *_sharedLoginManager;
+    static OCNElectionManager *_sharedElectionManager;
     dispatch_once(&onceToken, ^{
-        _sharedLoginManager = [[OCNElectionManager alloc]init];
+        _sharedElectionManager = [[OCNElectionManager alloc]init];
     });
     
-    return _sharedLoginManager;
+    return _sharedElectionManager;
 }
 
 

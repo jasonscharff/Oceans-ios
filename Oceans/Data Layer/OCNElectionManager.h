@@ -10,6 +10,6 @@
 
 @interface OCNElectionManager : NSObject
 
-+ (instancetype)sharedLoginManager;
++ (instancetype)sharedManager;
 
 @end
