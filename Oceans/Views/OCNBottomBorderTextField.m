@@ -1,20 +1,23 @@
 //
-//  BottomBorderTextField.m
-//  Ink
+//  OCNBottomBorderTextField.m
+//  Oceans
 //
-//  Created by Jason Scharff on 1/23/16.
-//  Copyright © 2016 Jason Scharff. All rights reserved.
+//  Created by Jason Scharff on 9/16/17.
+//  Copyright © 2017 Jason Felix Scharff. All rights reserved.
 //
 
-#import "BottomBorderTextField.h"
+#import "OCNBottomBorderTextField.h"
 
-@implementation BottomBorderTextField
+@implementation OCNBottomBorderTextField
 
 - (instancetype)initWithBorderColor:(UIColor *)color borderWidth:(CGFloat)width {
-  self = [super init];
-  self.borderColor = color;
-  self.borderWidth = width;
-  return self;
+    self = [super init];
+    if (self) {
+        self.borderColor = color;
+        self.borderWidth = width;
+    }
+    return self;
+    
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -34,3 +37,4 @@
 }
 
 @end
+

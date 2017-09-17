@@ -9,7 +9,6 @@
 #import "OCNScanViewController.h"
 
 #import "OCNManualEntryViewController.m"
-#import "CATransition+Oceans.h"
 
 
 @import AVFoundation;

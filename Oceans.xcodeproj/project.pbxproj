@@ -22,7 +22,6 @@
 		BEC8A76D1F6DA63C001BBDBE /* OCNVoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A76C1F6DA63C001BBDBE /* OCNVoteTableViewCell.m */; };
 		BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7701F6DA704001BBDBE /* OCNCircleTextView.m */; };
 		BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7731F6DBA24001BBDBE /* UITableView+LongPressReorder.m */; };
-		BEFB507D1F6DFE93000D7064 /* CATransition+Oceans.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFB507C1F6DFE93000D7064 /* CATransition+Oceans.m */; };
 		BEFB50801F6DFF83000D7064 /* OCNBottomBorderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEFB507F1F6DFF83000D7064 /* OCNBottomBorderTextField.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +57,6 @@
 		BEC8A7731F6DBA24001BBDBE /* UITableView+LongPressReorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+LongPressReorder.m"; path = "../../../../../Downloads/UITableView-Reorder-master/UITableView+Reorder/UITableView+LongPressReorder.m"; sourceTree = "<group>"; };
 		BEFB50741F6DEFCE000D7064 /* OCNManualEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNManualEntryViewController.m; sourceTree = "<group>"; };
 		BEFB50751F6DEFCE000D7064 /* OCNManualEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNManualEntryViewController.h; sourceTree = "<group>"; };
-		BEFB507B1F6DFE93000D7064 /* CATransition+Oceans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CATransition+Oceans.h"; sourceTree = "<group>"; };
-		BEFB507C1F6DFE93000D7064 /* CATransition+Oceans.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CATransition+Oceans.m"; sourceTree = "<group>"; };
 		BEFB507E1F6DFF83000D7064 /* OCNBottomBorderTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNBottomBorderTextField.h; sourceTree = "<group>"; };
 		BEFB507F1F6DFF83000D7064 /* OCNBottomBorderTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNBottomBorderTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,8 +95,6 @@
 				BEC8A7651F6D9D24001BBDBE /* 3rd party */,
 				BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */,
 				BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */,
-				BEFB507B1F6DFE93000D7064 /* CATransition+Oceans.h */,
-				BEFB507C1F6DFE93000D7064 /* CATransition+Oceans.m */,
 				BEC8A75F1F6D9AC7001BBDBE /* OCNTheme.h */,
 				BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */,
 				BEC8A75E1F6D99A1001BBDBE /* Model */,
@@ -253,7 +248,6 @@
 				BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */,
 				BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */,
 				BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */,
-				BEFB507D1F6DFE93000D7064 /* CATransition+Oceans.m in Sources */,
 				BEC8A7711F6DA704001BBDBE /* OCNCircleTextView.m in Sources */,
 				BEC8A7521F6D9470001BBDBE /* OCNScanViewController.m in Sources */,
 			);
