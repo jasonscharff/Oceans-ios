@@ -38,7 +38,6 @@
         if (index >= self.questions.count) {
             
             
-            return;
             [[OCNElectionManager sharedManager]vote:self.questions completion:^(BOOL success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if(success) {
