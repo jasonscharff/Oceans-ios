@@ -63,6 +63,7 @@
     }
     
     NSDictionary *parameters = @{@"private_key" : [OCNUserManager sharedManager].privateKey,
+                                 @"address" : [OCNUserManager sharedManager].address,
                                  @"ballot" : ballot};
     
     
