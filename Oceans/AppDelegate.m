@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "OCNLoginManager.h"
+#import "OCNElectionManager.h"
 #import "OCNScanViewController.h"
 #import "OCNQuestion.h"
 #import "OCNElectionViewController.h"

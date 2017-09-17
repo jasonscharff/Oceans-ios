@@ -15,7 +15,7 @@
 		BEC8A7471F6D7717001BBDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7451F6D7717001BBDBE /* LaunchScreen.storyboard */; };
 		BEC8A74A1F6D7717001BBDBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7491F6D7717001BBDBE /* main.m */; };
 		BEC8A7521F6D9470001BBDBE /* OCNScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */; };
-		BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */; };
+		BEC8A7551F6D94F5001BBDBE /* OCNElectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7541F6D94F5001BBDBE /* OCNElectionManager.m */; };
 		BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */; };
 		BEC8A75D1F6D999D001BBDBE /* OCNQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A75C1F6D999D001BBDBE /* OCNQuestion.m */; };
 		BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A7601F6D9AC7001BBDBE /* OCNTheme.m */; };
@@ -44,8 +44,8 @@
 		BEC8A7491F6D7717001BBDBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BEC8A7501F6D9470001BBDBE /* OCNScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNScanViewController.h; sourceTree = "<group>"; };
 		BEC8A7511F6D9470001BBDBE /* OCNScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNScanViewController.m; sourceTree = "<group>"; };
-		BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNLoginManager.h; sourceTree = "<group>"; };
-		BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNLoginManager.m; sourceTree = "<group>"; };
+		BEC8A7531F6D94F5001BBDBE /* OCNElectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNElectionManager.h; sourceTree = "<group>"; };
+		BEC8A7541F6D94F5001BBDBE /* OCNElectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNElectionManager.m; sourceTree = "<group>"; };
 		BEC8A7581F6D9891001BBDBE /* OCNQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNQuestionViewController.h; sourceTree = "<group>"; };
 		BEC8A7591F6D9891001BBDBE /* OCNQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNQuestionViewController.m; sourceTree = "<group>"; };
 		BEC8A75B1F6D999D001BBDBE /* OCNQuestion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNQuestion.h; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 		BEC8A7571F6D952A001BBDBE /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
-				BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */,
-				BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */,
+				BEC8A7531F6D94F5001BBDBE /* OCNElectionManager.h */,
+				BEC8A7541F6D94F5001BBDBE /* OCNElectionManager.m */,
 				BE98707F1F6E060100FCF9CE /* OCNHTTPSessionManager.h */,
 				BE9870801F6E060100FCF9CE /* OCNHTTPSessionManager.m */,
 			);
@@ -318,7 +318,7 @@
 			files = (
 				BEFB50801F6DFF83000D7064 /* OCNBottomBorderTextField.m in Sources */,
 				BE06E48B1F6DC8E300B68A39 /* OCNElectionViewController.m in Sources */,
-				BEC8A7551F6D94F5001BBDBE /* OCNLoginManager.m in Sources */,
+				BEC8A7551F6D94F5001BBDBE /* OCNElectionManager.m in Sources */,
 				BEC8A74A1F6D7717001BBDBE /* main.m in Sources */,
 				BEC8A76D1F6DA63C001BBDBE /* OCNVoteTableViewCell.m in Sources */,
 				BEC8A75D1F6D999D001BBDBE /* OCNQuestion.m in Sources */,

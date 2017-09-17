@@ -1,5 +1,5 @@
 //
-//  OCNLoginManager.h
+//  OCNElectionManager.h"
 //  Oceans
 //
 //  Created by Jason Scharff on 9/16/17.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OCNLoginManager : NSObject
+@interface OCNElectionManager : NSObject
 
 + (instancetype)sharedLoginManager;
 
