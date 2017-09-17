@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class OCNCandidate;
+
 @interface OCNQuestion : NSObject
 
 @property (nonatomic) NSString *prompt;
-@property (nonatomic) NSMutableArray<NSString *> *responses;
-@property (nonatomic) NSString *identifier;
+@property (nonatomic) NSMutableArray<OCNCandidate *> *responses;
+@property (nonatomic) NSInteger questionNumber;
+
++ (instancetype)questionFromDictionary: (NSDictionary *)dictionary;
+
 
 
 @end

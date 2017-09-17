@@ -8,7 +8,7 @@
 
 #import "OCNHTTPSessionManager.h"
 
-static NSString * kOCNDefaultBaseURL = @"https://api.reinstra.com/";
+static NSString * kOCNDefaultBaseURL = @"https://oceans12.herokuapp.com/";
 
 @implementation OCNHTTPSessionManager
 
