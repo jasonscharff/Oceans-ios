@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3BE955C713966ECAB2768D5 /* libPods-Oceans.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37184232674FBB117D19AF37 /* libPods-Oceans.a */; };
 		BE06E48B1F6DC8E300B68A39 /* OCNElectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */; };
+		BE9870811F6E060100FCF9CE /* OCNHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE9870801F6E060100FCF9CE /* OCNHTTPSessionManager.m */; };
 		BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */; };
 		BEC8A7441F6D7717001BBDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7431F6D7717001BBDBE /* Assets.xcassets */; };
 		BEC8A7471F6D7717001BBDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC8A7451F6D7717001BBDBE /* LaunchScreen.storyboard */; };
@@ -26,8 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		024CF2DC13060A423BDA98E5 /* Pods-Oceans.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oceans.release.xcconfig"; path = "Pods/Target Support Files/Pods-Oceans/Pods-Oceans.release.xcconfig"; sourceTree = "<group>"; };
+		25E0C2F33DED5110FEAE0FB3 /* Pods-Oceans.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oceans.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Oceans/Pods-Oceans.debug.xcconfig"; sourceTree = "<group>"; };
+		37184232674FBB117D19AF37 /* libPods-Oceans.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Oceans.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE06E4891F6DC8E300B68A39 /* OCNElectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNElectionViewController.h; sourceTree = "<group>"; };
 		BE06E48A1F6DC8E300B68A39 /* OCNElectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNElectionViewController.m; sourceTree = "<group>"; };
+		BE98707F1F6E060100FCF9CE /* OCNHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCNHTTPSessionManager.h; sourceTree = "<group>"; };
+		BE9870801F6E060100FCF9CE /* OCNHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCNHTTPSessionManager.m; sourceTree = "<group>"; };
 		BEC8A7371F6D7717001BBDBE /* Oceans.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oceans.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC8A73A1F6D7717001BBDBE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BEC8A73B1F6D7717001BBDBE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -66,17 +73,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3BE955C713966ECAB2768D5 /* libPods-Oceans.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22CA213135363F0D8C9C0F29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37184232674FBB117D19AF37 /* libPods-Oceans.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C723E362C75D46541E90F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25E0C2F33DED5110FEAE0FB3 /* Pods-Oceans.debug.xcconfig */,
+				024CF2DC13060A423BDA98E5 /* Pods-Oceans.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BEC8A72E1F6D7717001BBDBE = {
 			isa = PBXGroup;
 			children = (
 				BEC8A7391F6D7717001BBDBE /* Oceans */,
 				BEC8A7381F6D7717001BBDBE /* Products */,
+				2C723E362C75D46541E90F21 /* Pods */,
+				22CA213135363F0D8C9C0F29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +157,8 @@
 			children = (
 				BEC8A7531F6D94F5001BBDBE /* OCNLoginManager.h */,
 				BEC8A7541F6D94F5001BBDBE /* OCNLoginManager.m */,
+				BE98707F1F6E060100FCF9CE /* OCNHTTPSessionManager.h */,
+				BE9870801F6E060100FCF9CE /* OCNHTTPSessionManager.m */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -174,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEC8A74D1F6D7717001BBDBE /* Build configuration list for PBXNativeTarget "Oceans" */;
 			buildPhases = (
+				8C7FE45589314AEF3A1E6C7D /* [CP] Check Pods Manifest.lock */,
 				BEC8A7331F6D7717001BBDBE /* Sources */,
 				BEC8A7341F6D7717001BBDBE /* Frameworks */,
 				BEC8A7351F6D7717001BBDBE /* Resources */,
+				BEA2051937A71CA8B5E12932 /* [CP] Embed Pods Frameworks */,
+				1FEA2CA7FBD3AFEF07BCF664 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,6 +263,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FEA2CA7FBD3AFEF07BCF664 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oceans/Pods-Oceans-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C7FE45589314AEF3A1E6C7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEA2051937A71CA8B5E12932 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oceans/Pods-Oceans-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BEC8A7331F6D7717001BBDBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,6 +325,7 @@
 				BEC8A76A1F6DA2E0001BBDBE /* OCNStandardBackgroundViewController.m in Sources */,
 				BEC8A73C1F6D7717001BBDBE /* AppDelegate.m in Sources */,
 				BEC8A7641F6D9D1E001BBDBE /* AutolayoutHelper.m in Sources */,
+				BE9870811F6E060100FCF9CE /* OCNHTTPSessionManager.m in Sources */,
 				BEC8A7741F6DBA24001BBDBE /* UITableView+LongPressReorder.m in Sources */,
 				BEC8A75A1F6D9891001BBDBE /* OCNQuestionViewController.m in Sources */,
 				BEC8A7611F6D9AC7001BBDBE /* OCNTheme.m in Sources */,
@@ -369,6 +450,7 @@
 		};
 		BEC8A74E1F6D7717001BBDBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25E0C2F33DED5110FEAE0FB3 /* Pods-Oceans.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3R5J785EXT;
@@ -382,6 +464,7 @@
 		};
 		BEC8A74F1F6D7717001BBDBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 024CF2DC13060A423BDA98E5 /* Pods-Oceans.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3R5J785EXT;
